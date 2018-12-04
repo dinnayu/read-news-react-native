@@ -49,11 +49,6 @@ export default class ChannelList extends Component {
 		}
 	}
 
-	openWebView(){
-		return <WebView source={{uri: this.state.url}}
-				  		/>
-	}
-
 	/**
 	    This method returns an object that represents each rows of list
 	  */
@@ -72,6 +67,10 @@ export default class ChannelList extends Component {
 	    </TouchableOpacity>)
 	}
 	
+	/**
+	 * Return image from url
+	 * @param {image url} url 
+	 */
 	getImage(url){
 		if (url){
 			return 	<Image
